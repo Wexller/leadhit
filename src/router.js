@@ -24,6 +24,7 @@ const router = new  Router({
 });
 
 router.beforeEach((to, from, next) => {
+  // Проверка наличия записи в localStorage
   if (to.path === '/analytics') {
     const siteId = localStorage.getItem('leadhit-site-id');
 
